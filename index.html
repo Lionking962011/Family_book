@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>
+            Project 78
+        </title>
+
+        <style>
+            body {
+                text-align: center;
+                background-color: rgb(0, 255, 221);
+            }
+
+            #heading {
+                color: rgba(0, 0, 0, 0.63);
+                font-family: cursive;
+                text-decoration-line: underline;
+                text-decoration-style: wavy;
+                text-decoration-color: rgb(25, 209, 209);
+            }
+
+            #image {
+                height:450px;
+                width:400px;
+                border-radius: 10%;
+                border-style: double;
+                border-width: 5px;
+                background-color: white;
+            }
+
+            #image1 {
+                height:450px;
+                width:400px;
+                border-radius: 10%;
+                border-style: double;
+                border-width: 5px;
+                background-color: white;
+            }
+
+            #name {
+               color: blueviolet; 
+               font-weight: bold;
+               font-size: 22px;
+            }
+        </style>
+    </head>
+
+
+    <body>
+        <h1 id="heading">THE FAMILY BOOK</h1>
+
+        <img id="image" 
+        src="WhatsApp Image 2021-05-20 at 1.38.54 PM.jpeg">
+        <img id="image1" 
+        src="WhatsApp Image 2021-05-20 at 1.38.54 PM.jpeg">
+
+        <h4 id="name"></h4>
+
+        <button onclick="next()">
+            Next
+        </button>
+
+
+        <script>
+            var members= [
+                "WhatsApp Image 2021-05-20 at 1.45.24 PM.jpeg",
+                "mummy.png",
+                "WhatsApp Image 2021-05-20 at 2.31.05 PM.jpeg",
+            ];
+            var members1= [
+                "WhatsApp Image 2021-05-20 at 2.34.32 PM.jpeg",
+                "Untitled design (3).png",
+                "785.png",
+            ];
+            var names= [
+                "Saache Kapoor(me)",
+                "Swati Kapoor(mother)",
+                "Nitin kapoor(father)",
+            ];
+            var i=0;
+            function next(){
+            document.getElementById("image1").src=members1[i];    
+            document.getElementById("image").src=members[i];
+            document.getElementById("name").innerHTML=names[i];
+            if (i>1){
+            i=0;
+            }
+            else i++;
+            };
+        </script>
+    </body>
+</html>
